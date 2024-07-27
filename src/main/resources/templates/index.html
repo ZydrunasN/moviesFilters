@@ -14,7 +14,7 @@
             <form method="post" class="filters" th:action="@{/filter}" th:object="${filterDto}">
                 <div class="filter-name">
                     <label for="name">Pavadinimas</label>
-                    <input id="name" type="text" th:field="*{title}" required="">
+                    <input id="name" type="text" th:field="*{title}">
                 </div>
                 <div class="filter-time">
                     <label for="runtimeTo">Trukmė</label>

@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 @Log4j2
@@ -18,7 +19,7 @@ public class MoviesService {
             return new ArrayList<>();
         }
 
-        if(name.isEmpty() && runtime == 0) return movies;
+        if((Objects.isNull(name) || name.isEmpty()) && runtime == 0) return movies;
 
         movies = movies.stream()
                 .filter(movie -> movie.getTitle().toLowerCase().contains(name.toLowerCase()))
