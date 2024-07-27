@@ -10,17 +10,17 @@
 <main class="main-container">
     <div class="main">
         <section>
-            <h1 class="filters-title">Filmu Saraso Filtravimas</h1>
+            <h1 class="filters-title">Filmų Sąrašo Filtravimas</h1>
             <form method="post" class="filters" th:action="@{/filter}" th:object="${filterDto}">
                 <div class="filter-name">
                     <label for="name">Pavadinimas</label>
                     <input id="name" type="text" th:field="*{title}" required="">
                 </div>
                 <div class="filter-time">
-                    <label for="runtimeTo">Trukme</label>
+                    <label for="runtimeTo">Trukmė</label>
                     <select name="runtimeOption" id="runtimeOption" th:field="*{runtimeOptions}">
                         <option value="more">daugiau</option>
-                        <option value="less">maziau</option>
+                        <option value="less">mažiau</option>
                     </select>
                     <input class="runtime-input" id="runtimeTo" type="text" th:field="*{runtime}" required="">
                     <span>min.</span>
@@ -29,8 +29,21 @@
             </form>
         </section>
         <section>
-            <h2 class="movies-title"> Filmu sarasas
-            </h2>
+            <h2 class="movies-title"> Filmų sąrašas</h2>
+            <div class="movie-card" th:each="movie: ${filteredMovies}">
+                <div class="movie-card-img">
+                    <img th:src="${movie.getImage()}" style="width: 100px;">
+                </div>
+                <div class="movie-card-info">
+                    <span class="movie-card-title" th:text="${movie.getTitle()}"></span>
+                    <div class="movie-card-time">
+                        <span>Trukmė:</span>
+                        <span class="movie-card-time" th:text="${movie.getRunning_time()}"></span>
+                        <span>min.</span>
+                    </div>
+                    <span class="movie-card-description" th:text="${movie.getDescription()}"></span>
+                </div>
+            </div>
         </section>
     </div>
 </main>
