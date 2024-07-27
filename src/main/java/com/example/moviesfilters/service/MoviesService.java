@@ -19,7 +19,11 @@ public class MoviesService {
             return new ArrayList<>();
         }
 
-        if((Objects.isNull(name) || name.isEmpty()) && runtime == 0) return movies;
+        if((Objects.isNull(name) || name.isEmpty()) && runtime == 0){
+            if(runtimeOption.equals("more")) return movies;
+            if(runtimeOption.equals("less")) return new ArrayList<>();
+        }
+
 
         movies = movies.stream()
                 .filter(movie -> movie.getTitle().toLowerCase().contains(name.toLowerCase()))

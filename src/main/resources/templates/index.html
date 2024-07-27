@@ -30,18 +30,23 @@
         </section>
         <section>
             <h2 class="movies-title"> Filmų sąrašas</h2>
-            <div class="movie-card" th:each="movie: ${filteredMovies}">
-                <div class="movie-card-img">
-                    <img th:src="${movie.getImage()}" style="width: 100px;">
-                </div>
-                <div class="movie-card-info">
-                    <span class="movie-card-title" th:text="${movie.getTitle()}"></span>
-                    <div class="movie-card-time">
-                        <span>Trukmė:</span>
-                        <span class="movie-card-time" th:text="${movie.getRunning_time()}"></span>
-                        <span>min.</span>
+            <div th:if="${#lists.isEmpty(filteredMovies)}">
+                <span class="movies-not-found-title">Nerasta jokiu filmų.</span>
+            </div>
+            <div th:if="${!#lists.isEmpty(filteredMovies)}">
+                <div class="movie-card" th:each="movie: ${filteredMovies}">
+                    <div class="movie-card-img">
+                        <img th:src="${movie.getImage()}" style="width: 100px;">
                     </div>
-                    <span class="movie-card-description" th:text="${movie.getDescription()}"></span>
+                    <div class="movie-card-info">
+                        <span class="movie-card-title" th:text="${movie.getTitle()}"></span>
+                        <div class="movie-card-time">
+                            <span>Trukmė:</span>
+                            <span class="movie-card-time" th:text="${movie.getRunning_time()}"></span>
+                            <span>min.</span>
+                        </div>
+                        <span class="movie-card-description" th:text="${movie.getDescription()}"></span>
+                    </div>
                 </div>
             </div>
         </section>
