@@ -19,9 +19,9 @@ public class Movie {
     private String description;
     private String director;
     private String producer;
-    private String release_date;
-    private String running_time;
-    private String rt_score;
+    private int release_date;
+    private int running_time;
+    private int rt_score;
     private List<String> people;
     private List<String> species;
     private List<String> locations;
