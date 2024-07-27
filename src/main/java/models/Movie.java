@@ -1,0 +1,30 @@
+package models;
+
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+import java.util.List;
+
+@Setter
+@Getter
+@ToString
+public class Movie {
+    private String id;
+    private String title;
+    private String original_title;
+    private String original_title_romanised;
+    private String image;
+    private String movie_banner;
+    private String description;
+    private String director;
+    private String producer;
+    private String release_date;
+    private String running_time;
+    private String rt_score;
+    private List<String> people;
+    private List<String> species;
+    private List<String> locations;
+    private List<String> vehicles;
+    private String url;
+}
