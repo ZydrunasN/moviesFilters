@@ -11,22 +11,24 @@
     <div class="main">
         <section>
             <h1 class="filters-title">Filmų Sąrašo Filtravimas</h1>
-            <form method="post" class="filters" th:action="@{/filter}" th:object="${filterDto}">
-                <div class="filter-name">
-                    <label for="name">Pavadinimas</label>
-                    <input id="name" type="text" th:field="*{title}">
-                </div>
-                <div class="filter-time">
-                    <label for="runtimeTo">Trukmė</label>
-                    <select name="runtimeOption" id="runtimeOption" th:field="*{runtimeOptions}">
-                        <option value="more">daugiau</option>
-                        <option value="less">mažiau</option>
-                    </select>
-                    <input class="runtime-input" id="runtimeTo" type="text" th:field="*{runtime}" required="">
-                    <span>min.</span>
-                </div>
-                <input type="submit" value="Filtruoti">
+            <div class="filters-form-container">
+                <form method="post" class="filters" th:action="@{/filter}" th:object="${filterDto}">
+                    <div class="filter-name">
+                        <label for="name">Pavadinimas</label>
+                        <input id="name" type="text" th:field="*{title}">
+                    </div>
+                    <div class="filter-time">
+                        <label for="runtimeTo">Trukmė</label>
+                        <select name="runtimeOption" id="runtimeOption" th:field="*{runtimeOptions}">
+                            <option value="more">daugiau</option>
+                            <option value="less">mažiau</option>
+                        </select>
+                        <input class="runtime-input" id="runtimeTo" type="text" th:field="*{runtime}" required="">
+                        <span>min.</span>
+                    </div>
+                    <input type="submit" value="Filtruoti">
             </form>
+            </div>
         </section>
         <section>
             <h2 class="movies-title"> Filmų sąrašas</h2>

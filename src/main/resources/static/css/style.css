@@ -90,3 +90,8 @@
     font-weight: bold;
     font-size: 25px;
 }
+
+.filters-form-container {
+    margin-left: 10%;
+    margin-right: 10%;
+}
