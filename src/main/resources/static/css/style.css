@@ -1,0 +1,54 @@
+
+.filters {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+}
+
+.filter-name {
+    display: flex;
+    column-gap: 10px;
+}
+
+.filter-time {
+    display: flex;
+    column-gap: 10px;
+}
+
+.filters-title {
+    display: flex;
+    justify-content:  center;
+    font-weight: bolder;
+    margin-bottom: 30px;
+}
+
+.movies-title {
+    display: flex;
+    justify-content:  center;
+    font-weight: bolder;
+    margin-top: 10%;
+    margin-bottom: 10px;
+}
+
+.input-movie-name {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.runtime-input {
+    width: 10%;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.main {
+    background-color: bisque;
+    border-radius: 5px;
+    padding: 50px;
+}

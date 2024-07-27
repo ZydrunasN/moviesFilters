@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/html" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movies</title>
+    <link rel="stylesheet" href=/css/style.css>
+</head>
+<body>
+<main class="main-container">
+    <div class="main">
+        <section>
+            <h1 class="filters-title">Filmu Saraso Filtravimas</h1>
+            <form method="post" class="filters" th:action="@{/filter}" th:object="${filterDto}">
+                <div class="filter-name">
+                    <label for="name">Pavadinimas</label>
+                    <input id="name" type="text" th:field="*{title}" required="">
+                </div>
+                <div class="filter-time">
+                    <label for="runtimeTo">Trukme</label>
+                    <select name="runtimeOption" id="runtimeOption" th:field="*{runtimeOptions}">
+                        <option value="more">daugiau</option>
+                        <option value="less">maziau</option>
+                    </select>
+                    <input class="runtime-input" id="runtimeTo" type="text" th:field="*{runtime}" required="">
+                    <span>min.</span>
+                </div>
+                <input type="submit" value="Filtruoti">
+            </form>
+        </section>
+        <section>
+            <h2 class="movies-title"> Filmu sarasas
+            </h2>
+        </section>
+    </div>
+</main>
+</body>
+</html>
