@@ -1,6 +1,6 @@
 package com.example.moviesfilters.service;
 
-import models.Movie;
+import com.example.moviesfilters.models.Movie;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

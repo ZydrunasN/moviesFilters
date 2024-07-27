@@ -1,7 +1,7 @@
 package com.example.moviesfilters.service;
 
 import lombok.extern.log4j.Log4j2;
-import models.Movie;
+import com.example.moviesfilters.models.Movie;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

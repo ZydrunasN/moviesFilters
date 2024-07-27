@@ -1,6 +1,6 @@
 package com.example.moviesfilters.service;
 
-import models.Movie;
+import com.example.moviesfilters.models.Movie;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 

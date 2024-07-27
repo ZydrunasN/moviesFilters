@@ -1,4 +1,4 @@
-package models;
+package com.example.moviesfilters.models;
 
 import lombok.Builder;
 import lombok.Getter;
