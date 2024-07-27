@@ -7,7 +7,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 import java.util.List;
 
 @Service
-public class GhibliApi {
+public class GhibliApiService {
     private static final String URI = "https://ghibliapi.dev/films?limit=200";
 
     public List<Movie> apiCall() {
